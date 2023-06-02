@@ -73,7 +73,7 @@ for iP in range(5):
 ############################# PIE CHARTS
 
 breakOutOnMyOwn = True #False
-[demo, genreNames, discoveryMethodNames] = spotifyArtistDemo(breakOutOnMyOwn)
+[demo, genreNames, discoveryMethodNames, countryNames] = spotifyArtistDemo(breakOutOnMyOwn)
 
 artistListDemo = list(demo.keys()); 
 fnDemo = list(demo[artistListDemo[0]])
@@ -115,7 +115,7 @@ for iS in range(len(fnSong)):
             
 #print(aggregateSongs)
 
-[fig, axs, numRowsPie, numColsPie] = spotifyAggregate2Pie(aggregateSongs, genreNames, discoveryMethodNames)
+[fig, axs, numRowsPie, numColsPie] = spotifyAggregate2Pie(aggregateSongs, genreNames, discoveryMethodNames, countryNames)
 #Add a pie chart with top 5 separate
 #Make it in the last slot
 row = numRowsPie-1
@@ -168,7 +168,7 @@ for iA in range(len(fnArtist)):
 
 
 
-[fig, axs, numRowsPie, numColsPie] = spotifyAggregate2Pie(aggregateArtistsTop5[0], genreNames, discoveryMethodNames)
+[fig, axs, numRowsPie, numColsPie] = spotifyAggregate2Pie(aggregateArtistsTop5[0], genreNames, discoveryMethodNames, countryNames)
 #Add a pie chart with top 5 separate
 #Make it in the last slot
 row = numRowsPie-1
@@ -195,7 +195,7 @@ for i in range(len(labelsPie)):
 axs[row, col].pie(songsByTop5, labels=labelsPie, startangle=270, textprops={'fontsize': 8})
 fig.suptitle('Count of Artist in Number one Spot', fontsize=16)
 
-[fig, axs, numRowsPie, numColsPie] = spotifyAggregate2Pie(aggregateArtists, genreNames, discoveryMethodNames)
+[fig, axs, numRowsPie, numColsPie] = spotifyAggregate2Pie(aggregateArtists, genreNames, discoveryMethodNames, countryNames)
 #Add a pie chart with top 5 separate
 #Make it in the last slot
 row = numRowsPie-1

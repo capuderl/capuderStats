@@ -27,7 +27,7 @@ def incrementSong(songs, artistName, numTimes):
     return songs
     
     
-def spotifyAggregate2Pie(aggregate, genreNames, discoveryMethodNames):
+def spotifyAggregate2Pie(aggregate, genreNames, discoveryMethodNames, countryNames):
 
     fnDemo = list(aggregate.keys());
 
@@ -66,6 +66,10 @@ def spotifyAggregate2Pie(aggregate, genreNames, discoveryMethodNames):
             elif (fnDemo[iF] == 'discovery'):
                 #labelsPie = discoveryMethodNames(uniqueVals)
                 labelsPie = [discoveryMethodNames[i] for i in uniqueVals]
+            elif (fnDemo[iF] == 'country'):
+                #labelsPie = discoveryMethodNames(uniqueVals)
+                [valCount, uniqueVals] = condenseCategories(valCount, uniqueVals, len(countryNames)-1)
+                labelsPie = [countryNames[i] for i in uniqueVals]
             else:
                 print(fnDemo[iF])
                 raise ValueError('is not programmed properly in demographics.')
@@ -88,3 +92,43 @@ def spotifyAggregate2Pie(aggregate, genreNames, discoveryMethodNames):
     return fig, axs, numRowsPie, numColsPie
 
 
+def condenseCategories(valCount, uniqueVals, valMoveTo):
+
+    otherCount = 0
+    
+    #print("valCount in")
+    #print(valCount)
+    #print("uniqueVals in")
+    #print(uniqueVals)
+
+    #Idea is that if the value is too small, move it to the "other" category
+    for iVal in reversed(range(len(uniqueVals))):
+        #get rid of it if it's X% or less
+        if round(100*valCount[iVal]/sum(valCount)) <= 2:
+            otherCount = otherCount + valCount[iVal]
+            #print('Before ' + iVal + ' del ' + valCount)
+            del valCount[iVal]
+            #print('After del ' + valCount)
+            del uniqueVals[iVal]
+    
+    if otherCount > 0:
+        #check to see if the "other" category is even in the unique values list.  If not append it
+        if not numpy.in1d(valMoveTo, uniqueVals):
+            uniqueVals.append(valMoveTo)
+            valCount.append(0)
+        
+        #we're going to assume that valMoveTo is at the end
+        #actually let's just assert it
+        for i in range(len(uniqueVals)):
+            assert uniqueVals[i] <= valMoveTo, 'This fxn assumes the value to move to is at the end'
+        
+        valCount[-1] = valCount[-1] + otherCount
+    
+    #print("valCount out")
+    #print(valCount)
+    #print("uniqueVals out")
+    #print(uniqueVals)
+    
+    #wait = input("Breakpoint")
+    
+    return valCount, uniqueVals
