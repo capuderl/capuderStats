@@ -657,7 +657,104 @@ def spotify_stats_2022(songs,artists):
     songs = incrementSong(songs, 'Joji', 3);
     
     print('11/11/22: Bought a house this week.  AAAAAAAAaaaaaaaaAAAAAAAAAaaaaaaAAAAhhhhhhhhhHHHHHHHHhhh')
+    
+     ## 11/18/22
+    
+    artists = addArtist(artists, 'The_Birthday_Massacre', 1);
+    artists = addArtist(artists, 'Evanescence',    2);
+    artists = addArtist(artists, 'Joji', 3);
+    artists = addArtist(artists, 'Future_Islands', 4);
+    artists = addArtist(artists, 'Foals',        5);
 
+    songs = incrementSong(songs, 'Maximum_Baloon', 1);
+    songs = incrementSong(songs, 'Evanescence', 1);
+    songs = incrementSong(songs, 'Foals', 1);
+    songs = incrementSong(songs, 'Arlo_Parks', 1);
+    songs = incrementSong(songs, 'Chappell_Roan', 1)
+    
+    ## 11/25/22
+    
+    artists = addArtist(artists, 'James_Blake', 1);
+    artists = addArtist(artists, 'Hawthorne_Heights',    2);
+    artists = addArtist(artists, 'Four_Year_Strong', 3);
+    artists = addArtist(artists, 'Taylor_Swift', 4);
+    artists = addArtist(artists, 'Self_Esteem',        5);
+
+    songs = incrementSong(songs, 'Brent_Faiyaz', 1);
+    songs = incrementSong(songs, 'Taylor_Swift', 1);
+    songs = incrementSong(songs, 'Bring_Me_the_Horizon', 1);
+    songs = incrementSong(songs, 'Editors', 1);
+    songs = incrementSong(songs, 'Four_Year_Strong', 1)
+    
+    ## 12/2/22
+
+    artists = addArtist(artists, 'Foals', 1);
+    artists = addArtist(artists, 'James_Blake',    2);
+    artists = addArtist(artists, 'Charli_XCX', 3);
+    artists = addArtist(artists, 'Interpol', 4);
+    artists = addArtist(artists, 'Hawthorne_Heights',        5);
+
+    songs = incrementSong(songs, 'Foals', 1);
+    songs = incrementSong(songs, 'The_Chainsmokers', 1);
+    songs = incrementSong(songs, 'Silverstein', 1);
+    songs = incrementSong(songs, 'Taylor_Swift', 1);
+    songs = incrementSong(songs, 'Half_Alive', 1)
+
+    ## 12/9/22
+
+    artists = addArtist(artists, 'James_Blake', 1);
+    artists = addArtist(artists, 'Poppy',    2);
+    artists = addArtist(artists, 'Bo_Burnham', 3);
+    artists = addArtist(artists, 'Pale_Waves', 4);
+    artists = addArtist(artists, 'Charli_XCX',        5);
+
+    songs = incrementSong(songs, 'James_Blake', 1);
+    songs = incrementSong(songs, 'Poppy', 1);
+    songs = incrementSong(songs, 'Matt_and_Kim', 1);
+    songs = incrementSong(songs, 'Charming_Jo', 1);
+    songs = incrementSong(songs, 'Hawthorne_Heights', 1)
+    
+    ## 12/16/22
+    
+    artists = addArtist(artists, 'Self_Esteem', 1);
+    artists = addArtist(artists, 'Caroline_Polachek',    2);
+    artists = addArtist(artists, 'Poppy', 3);
+    artists = addArtist(artists, 'Dance_Gavin_Dance', 4);
+    artists = addArtist(artists, 'Lucky_Daye',        5);
+
+    songs = incrementSong(songs, 'Jukebox_the_Ghost', 1);
+    songs = incrementSong(songs, 'AJR', 1);
+    songs = incrementSong(songs, 'Lucky_Daye', 1);
+    songs = incrementSong(songs, 'Poppy', 1);
+    songs = incrementSong(songs, 'Yves_Tumor', 1)
+    
+    ## 12/16/22
+    
+    artists = addArtist(artists, 'Foals', 1);
+    artists = addArtist(artists, 'Plushgun',    2);
+    artists = addArtist(artists, 'Childish_Gambino', 3);
+    artists = addArtist(artists, 'Caroline_Polachek', 4);
+    artists = addArtist(artists, 'James_Blake',        5);
+
+    songs = incrementSong(songs, 'Vanshire', 1);
+    songs = incrementSong(songs, 'Childish_Gambino', 1);
+    songs = incrementSong(songs, 'Plushgun', 1);
+    songs = incrementSong(songs, 'The_Get_Up_Kids', 1);
+    songs = incrementSong(songs, 'dvsn', 1)
+    
+    ## 12/30/22
+    #I missed a week!  First time I think
+    
+    artists = addArtist(artists, 'James_Blake', 1);
+    artists = addArtist(artists, 'Self_Esteem',    2);
+    artists = addArtist(artists, 'The_National', 3);
+    artists = addArtist(artists, 'Foals', 4);
+    artists = addArtist(artists, 'SZA',        5);
+
+    songs = incrementSong(songs, 'The_xx', 1);
+    songs = incrementSong(songs, 'Foals', 2);
+    songs = incrementSong(songs, 'Phoebe_Bridgers', 1);
+    songs = incrementSong(songs, 'The_Kooks', 1);
     
     return songs,artists
 

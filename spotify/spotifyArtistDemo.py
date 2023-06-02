@@ -15,14 +15,15 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     R_AND_B = 6
 
     if breakOutOnMyOwn:
-        discoveryMethodNames = ['Brian', 'Teenage/College', 'Kimi', 'Concert', 'Media', 'Musical', 'Hip Hop Awakening', 'Emo Awakening', 'On my own - other'];
+        discoveryMethodNames = ['Brian', 'Teenage/College', 'Kimi', 'Concert', 'Media', 'Musical', 'Hip Hop Awakening', 'Emo Awakening', 'Music League', 'On my own - other'];
         # ON_MY_OWN = 4;
         ON_MY_OWN_CONCERT = 3; #, 'On my own - from concert',
         ON_MY_OWN_TV = 4; #'On my own - seen on TV',
         ON_MY_OWN_MUSICAL = 5; #'On my own - musical',
         ON_MY_OWN_HIP_HOP = 6; #'On my own - hip hop awakening',
         ON_MY_OWN_EMO = 7; #'On my own - emo awakening',
-        ON_MY_OWN_OTHER = 8; #'On my own - other'
+        MUSIC_LEAGUE = 8;
+        ON_MY_OWN_OTHER = 9; #'On my own - other'
     else:
         discoveryMethodNames = ['Brian', 'Teenage/College', 'Kimi', 'On my own'];
         ON_MY_OWN = 3;
@@ -32,6 +33,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
         ON_MY_OWN_TV = ON_MY_OWN; #'On my own - seen on TV',
         ON_MY_OWN_MUSICAL = ON_MY_OWN; #'On my own - musical',
         ON_MY_OWN_OTHER = ON_MY_OWN; #'On my own - other'
+        MUSIC_LEAGUE = ON_MY_OWN;
 
     BRIAN = 0
     OLD_DAYS = 1
@@ -466,7 +468,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Lauv']['British'] = False;
     demo['Lauv']['genre'] = POP;
     demo['Lauv']['discovery'] = ON_MY_OWN_CONCERT;
-    demo['Lauv']['Seen_Live'] = True;
+    demo['Lauv']['Seen_Live'] = False;
     demo['Lauv']['Kimi'] = False;
 
     demo['Lil_Dicky'] = dict()
@@ -925,7 +927,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['The_Strokes']['British'] = False;
     demo['The_Strokes']['genre'] = INDIE;
     demo['The_Strokes']['discovery'] = OLD_DAYS;
-    demo['The_Strokes']['Seen_Live'] = False;
+    demo['The_Strokes']['Seen_Live'] = True;
     demo['The_Strokes']['Kimi'] = False;
 
     demo['The_Weeknd'] = dict()
@@ -1296,6 +1298,564 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['She_Wants_Revenge']['discovery'] = ON_MY_OWN_OTHER;
     demo['She_Wants_Revenge']['Seen_Live'] = False;
     demo['She_Wants_Revenge']['Kimi'] = False;
+    
+    demo['The_Birthday_Massacre'] = dict()
+    demo['The_Birthday_Massacre']['Male'] = True; 
+    demo['The_Birthday_Massacre']['POC'] = False;
+    demo['The_Birthday_Massacre']['British'] = False;
+    demo['The_Birthday_Massacre']['genre'] = EMO;
+    demo['The_Birthday_Massacre']['discovery'] = MUSIC_LEAGUE; #music league Brian
+    demo['The_Birthday_Massacre']['Seen_Live'] = False;
+    demo['The_Birthday_Massacre']['Kimi'] = False;
+    
+    demo['Maximum_Baloon'] = dict()
+    demo['Maximum_Baloon']['Male'] = True; 
+    demo['Maximum_Baloon']['POC'] = False;
+    demo['Maximum_Baloon']['British'] = False;
+    demo['Maximum_Baloon']['genre'] = INDIE;
+    demo['Maximum_Baloon']['discovery'] = OLD_DAYS; 
+    demo['Maximum_Baloon']['Seen_Live'] = False;
+    demo['Maximum_Baloon']['Kimi'] = False;
+    
+    demo['Arlo_Parks'] = dict()
+    demo['Arlo_Parks']['Male'] = False; 
+    demo['Arlo_Parks']['POC'] = True;
+    demo['Arlo_Parks']['British'] = True;
+    demo['Arlo_Parks']['genre'] = R_AND_B;
+    demo['Arlo_Parks']['discovery'] = MUSIC_LEAGUE; #music league
+    demo['Arlo_Parks']['Seen_Live'] = False;
+    demo['Arlo_Parks']['Kimi'] = False;
+    
+    demo['Chappell_Roan'] = dict()
+    demo['Chappell_Roan']['Male'] = False; 
+    demo['Chappell_Roan']['POC'] = False;
+    demo['Chappell_Roan']['British'] = False;
+    demo['Chappell_Roan']['genre'] = INDIE;
+    demo['Chappell_Roan']['discovery'] = MUSIC_LEAGUE; #music league
+    demo['Chappell_Roan']['Seen_Live'] = False;
+    demo['Chappell_Roan']['Kimi'] = True;
+
+    demo['Four_Year_Strong'] = dict()
+    demo['Four_Year_Strong']['Male'] = True; 
+    demo['Four_Year_Strong']['POC'] = False;
+    demo['Four_Year_Strong']['British'] = False;
+    demo['Four_Year_Strong']['genre'] = EMO;
+    demo['Four_Year_Strong']['discovery'] = MUSIC_LEAGUE; #SPENCER! music league
+    demo['Four_Year_Strong']['Seen_Live'] = False;
+    demo['Four_Year_Strong']['Kimi'] = False;    
+
+    demo['Brent_Faiyaz'] = dict()
+    demo['Brent_Faiyaz']['Male'] = True; 
+    demo['Brent_Faiyaz']['POC'] = True;
+    demo['Brent_Faiyaz']['British'] = False;
+    demo['Brent_Faiyaz']['genre'] = R_AND_B;
+    demo['Brent_Faiyaz']['discovery'] = KIMI;
+    demo['Brent_Faiyaz']['Seen_Live'] = False;
+    demo['Brent_Faiyaz']['Kimi'] = True;
+    
+    demo['Bring_Me_the_Horizon'] = dict()
+    demo['Bring_Me_the_Horizon']['Male'] = True; 
+    demo['Bring_Me_the_Horizon']['POC'] = False;
+    demo['Bring_Me_the_Horizon']['British'] = False;
+    demo['Bring_Me_the_Horizon']['genre'] = EMO;
+    demo['Bring_Me_the_Horizon']['discovery'] = ON_MY_OWN_EMO;
+    demo['Bring_Me_the_Horizon']['Seen_Live'] = False;
+    demo['Bring_Me_the_Horizon']['Kimi'] = False; 
+    
+    demo['Half_Alive'] = dict()
+    demo['Half_Alive']['Male'] = True; 
+    demo['Half_Alive']['POC'] = False;
+    demo['Half_Alive']['British'] = False;
+    demo['Half_Alive']['genre'] = INDIE;
+    demo['Half_Alive']['discovery'] = MUSIC_LEAGUE; #Music League
+    demo['Half_Alive']['Seen_Live'] = False;
+    demo['Half_Alive']['Kimi'] = False; 
+    
+    demo['Poppy'] = dict()
+    demo['Poppy']['Male'] = False; 
+    demo['Poppy']['POC'] = False;
+    demo['Poppy']['British'] = False;
+    demo['Poppy']['genre'] = EMO;  #wtf genre is this lol
+    demo['Poppy']['discovery'] = MUSIC_LEAGUE; #Music League
+    demo['Poppy']['Seen_Live'] = False;
+    demo['Poppy']['Kimi'] = False;
+
+    demo['Pale_Waves'] = dict()
+    demo['Pale_Waves']['Male'] = False; 
+    demo['Pale_Waves']['POC'] = False;
+    demo['Pale_Waves']['British'] = True;
+    demo['Pale_Waves']['genre'] = EMO;  #wtf genre is this lol
+    demo['Pale_Waves']['discovery'] = BRIAN; #Music League
+    demo['Pale_Waves']['Seen_Live'] = False;
+    demo['Pale_Waves']['Kimi'] = False;
+    
+    demo['Charming_Jo'] = dict()
+    demo['Charming_Jo']['Male'] = True; 
+    demo['Charming_Jo']['POC'] = True;
+    demo['Charming_Jo']['British'] = False;
+    demo['Charming_Jo']['genre'] = POP;  #wtf genre is this lol
+    demo['Charming_Jo']['discovery'] = ON_MY_OWN_OTHER; #reddit
+    demo['Charming_Jo']['Seen_Live'] = False;
+    demo['Charming_Jo']['Kimi'] = False;
+    
+    demo['Yves_Tumor'] = dict()
+    demo['Yves_Tumor']['Male'] = True; 
+    demo['Yves_Tumor']['POC'] = True;
+    demo['Yves_Tumor']['British'] = False;
+    demo['Yves_Tumor']['genre'] = R_AND_B;
+    demo['Yves_Tumor']['discovery'] = KIMI;
+    demo['Yves_Tumor']['Seen_Live'] = False;
+    demo['Yves_Tumor']['Kimi'] = True;
+    
+    demo['Jukebox_the_Ghost'] = dict()
+    demo['Jukebox_the_Ghost']['Male'] = True; 
+    demo['Jukebox_the_Ghost']['POC'] = False;
+    demo['Jukebox_the_Ghost']['British'] = False;
+    demo['Jukebox_the_Ghost']['genre'] = INDIE;
+    demo['Jukebox_the_Ghost']['discovery'] = MUSIC_LEAGUE; #music league - Nikki
+    demo['Jukebox_the_Ghost']['Seen_Live'] = False;
+    demo['Jukebox_the_Ghost']['Kimi'] = False;
+    
+    demo['AJR'] = dict()
+    demo['AJR']['Male'] = True; 
+    demo['AJR']['POC'] = False;
+    demo['AJR']['British'] = False;
+    demo['AJR']['genre'] = INDIE;
+    demo['AJR']['discovery'] = MUSIC_LEAGUE;  #music league
+    demo['AJR']['Seen_Live'] = False;
+    demo['AJR']['Kimi'] = False;
+    
+    demo['dvsn'] = dict()
+    demo['dvsn']['Male'] = True; 
+    demo['dvsn']['POC'] = True;
+    demo['dvsn']['British'] = False;
+    demo['dvsn']['genre'] = R_AND_B;
+    demo['dvsn']['discovery'] = KIMI;
+    demo['dvsn']['Seen_Live'] = False;
+    demo['dvsn']['Kimi'] = True;
+
+    demo['Vanshire'] = dict()
+    demo['Vanshire']['Male'] = True; 
+    demo['Vanshire']['POC'] = False;
+    demo['Vanshire']['British'] = False;
+    demo['Vanshire']['genre'] = INDIE;
+    demo['Vanshire']['discovery'] = ON_MY_OWN_OTHER;
+    demo['Vanshire']['Seen_Live'] = False;
+    demo['Vanshire']['Kimi'] = False;
+    
+    demo['Phoebe_Bridgers'] = dict()
+    demo['Phoebe_Bridgers']['Male'] = False; 
+    demo['Phoebe_Bridgers']['POC'] = False;
+    demo['Phoebe_Bridgers']['British'] = False;
+    demo['Phoebe_Bridgers']['genre'] = INDIE;
+    demo['Phoebe_Bridgers']['discovery'] = BRIAN;
+    demo['Phoebe_Bridgers']['Seen_Live'] = False;
+    demo['Phoebe_Bridgers']['Kimi'] = False;
+    
+    demo['The_Kooks'] = dict()
+    demo['The_Kooks']['Male'] = True; 
+    demo['The_Kooks']['POC'] = False;
+    demo['The_Kooks']['British'] = True;
+    demo['The_Kooks']['genre'] = INDIE;
+    demo['The_Kooks']['discovery'] = OLD_DAYS;
+    demo['The_Kooks']['Seen_Live'] = True;
+    demo['The_Kooks']['Kimi'] = True;
+    
+    demo['Griff'] = dict()
+    demo['Griff']['Male'] = False; 
+    demo['Griff']['POC'] = True;
+    demo['Griff']['British'] = True;
+    demo['Griff']['genre'] = INDIE;
+    demo['Griff']['discovery'] = MUSIC_LEAGUE; #Music League
+    demo['Griff']['Seen_Live'] = False;
+    demo['Griff']['Kimi'] = False;\
+    
+    demo['The_Chainsmokers'] = dict()
+    demo['The_Chainsmokers']['Male'] = True; 
+    demo['The_Chainsmokers']['POC'] = False;
+    demo['The_Chainsmokers']['British'] = False;
+    demo['The_Chainsmokers']['genre'] = POP;
+    demo['The_Chainsmokers']['discovery'] = ON_MY_OWN_OTHER;
+    demo['The_Chainsmokers']['Seen_Live'] = False;
+    demo['The_Chainsmokers']['Kimi'] = False;
+    
+    demo['Lany'] = dict()
+    demo['Lany']['Male'] = True; 
+    demo['Lany']['POC'] = False;
+    demo['Lany']['British'] = False;
+    demo['Lany']['genre'] = POP;
+    demo['Lany']['discovery'] = ON_MY_OWN_CONCERT;
+    demo['Lany']['Seen_Live'] = True;
+    demo['Lany']['Kimi'] = False;
+
+    demo['Genesis_Owusu'] = dict()
+    demo['Genesis_Owusu']['Male'] = True; 
+    demo['Genesis_Owusu']['POC'] = True;
+    demo['Genesis_Owusu']['British'] = True; #australian is british
+    demo['Genesis_Owusu']['genre'] = INDIE;
+    demo['Genesis_Owusu']['discovery'] = ON_MY_OWN_CONCERT;
+    demo['Genesis_Owusu']['Seen_Live'] = True;
+    demo['Genesis_Owusu']['Kimi'] = False;
+    
+    demo['The_Wombats'] = dict()
+    demo['The_Wombats']['Male'] = True; 
+    demo['The_Wombats']['POC'] = False;
+    demo['The_Wombats']['British'] = True;
+    demo['The_Wombats']['genre'] = INDIE;
+    demo['The_Wombats']['discovery'] = BRIAN;
+    demo['The_Wombats']['Seen_Live'] = False;
+    demo['The_Wombats']['Kimi'] = False;
+    
+    demo['Jaime_xx'] = dict()
+    demo['Jaime_xx']['Male'] = True; 
+    demo['Jaime_xx']['POC'] = False;
+    demo['Jaime_xx']['British'] = True;
+    demo['Jaime_xx']['genre'] = INDIE;
+    demo['Jaime_xx']['discovery'] = BRIAN;
+    demo['Jaime_xx']['Seen_Live'] = False;
+    demo['Jaime_xx']['Kimi'] = False;
+    
+    demo['Yeah_Yeah_Yeahs'] = dict()
+    demo['Yeah_Yeah_Yeahs']['Male'] = False; 
+    demo['Yeah_Yeah_Yeahs']['POC'] = False;
+    demo['Yeah_Yeah_Yeahs']['British'] = False;
+    demo['Yeah_Yeah_Yeahs']['genre'] = INDIE;
+    demo['Yeah_Yeah_Yeahs']['Seen_Live'] = True;
+    demo['Yeah_Yeah_Yeahs']['discovery'] = OLD_DAYS;
+    demo['Yeah_Yeah_Yeahs']['Kimi'] = False;
+    
+    demo['MYSS_KETA'] = dict()
+    demo['MYSS_KETA']['Male'] = False; 
+    demo['MYSS_KETA']['POC'] = False;
+    demo['MYSS_KETA']['British'] = False;
+    demo['MYSS_KETA']['genre'] = POP;
+    demo['MYSS_KETA']['discovery'] = ON_MY_OWN_TV;
+    demo['MYSS_KETA']['Seen_Live'] = False;
+    demo['MYSS_KETA']['Kimi'] = False;
+    
+    demo['Toro_y_Moi'] = dict()
+    demo['Toro_y_Moi']['Male'] = True; 
+    demo['Toro_y_Moi']['POC'] = True;
+    demo['Toro_y_Moi']['British'] = False;
+    demo['Toro_y_Moi']['genre'] = POP;
+    demo['Toro_y_Moi']['discovery'] = ON_MY_OWN_CONCERT;
+    demo['Toro_y_Moi']['Seen_Live'] = True;
+    demo['Toro_y_Moi']['Kimi'] = True;
+    
+    demo['Born_Ruffians'] = dict()
+    demo['Born_Ruffians']['Male'] = True; 
+    demo['Born_Ruffians']['POC'] = False;
+    demo['Born_Ruffians']['British'] = False;
+    demo['Born_Ruffians']['genre'] = INDIE;
+    demo['Born_Ruffians']['discovery'] = OLD_DAYS;
+    demo['Born_Ruffians']['Seen_Live'] = False;
+    demo['Born_Ruffians']['Kimi'] = False;
+    
+    demo['Streetlight_Manifesto'] = dict()
+    demo['Streetlight_Manifesto']['Male'] = True; 
+    demo['Streetlight_Manifesto']['POC'] = False;
+    demo['Streetlight_Manifesto']['British'] = False;
+    demo['Streetlight_Manifesto']['genre'] = EMO;
+    demo['Streetlight_Manifesto']['discovery'] = MUSIC_LEAGUE; #music league
+    demo['Streetlight_Manifesto']['Seen_Live'] = False;
+    demo['Streetlight_Manifesto']['Kimi'] = False;
+    
+    demo['Fred_Again'] = dict()
+    demo['Fred_Again']['Male'] = True; 
+    demo['Fred_Again']['POC'] = False;
+    demo['Fred_Again']['British'] = True;
+    demo['Fred_Again']['genre'] = POP;
+    demo['Fred_Again']['discovery'] = ON_MY_OWN_CONCERT; #Found while researching 070 shake
+    demo['Fred_Again']['Seen_Live'] = False;
+    demo['Fred_Again']['Kimi'] = True;
+    
+    demo['boygenius'] = dict()
+    demo['boygenius']['Male'] = False; 
+    demo['boygenius']['POC'] = False;
+    demo['boygenius']['British'] = False;
+    demo['boygenius']['genre'] = INDIE;
+    demo['boygenius']['discovery'] = ON_MY_OWN_CONCERT;
+    demo['boygenius']['Seen_Live'] = True;
+    demo['boygenius']['Kimi'] = False;
+    
+    demo['O70_Shake'] = dict()
+    demo['O70_Shake']['Male'] = False; 
+    demo['O70_Shake']['POC'] = True;
+    demo['O70_Shake']['British'] = False;
+    demo['O70_Shake']['genre'] = HIPHOP;
+    demo['O70_Shake']['discovery'] = KIMI;
+    demo['O70_Shake']['Seen_Live'] = True;
+    demo['O70_Shake']['Kimi'] = True;
+    
+    demo['Muse'] = dict()
+    demo['Muse']['Male'] = True; 
+    demo['Muse']['POC'] = False;
+    demo['Muse']['British'] = True;
+    demo['Muse']['genre'] = INDIE;
+    demo['Muse']['discovery'] = OLD_DAYS;
+    demo['Muse']['Seen_Live'] = True;
+    demo['Muse']['Kimi'] = False;
+    
+    demo['Nine_Inch_Nails'] = dict()
+    demo['Nine_Inch_Nails']['Male'] = True; 
+    demo['Nine_Inch_Nails']['POC'] = False;
+    demo['Nine_Inch_Nails']['British'] = False;
+    demo['Nine_Inch_Nails']['genre'] = OLD;
+    demo['Nine_Inch_Nails']['discovery'] = MUSIC_LEAGUE;  #music league
+    demo['Nine_Inch_Nails']['Seen_Live'] = False;
+    demo['Nine_Inch_Nails']['Kimi'] = False;
+    
+    demo['Siames'] = dict()
+    demo['Siames']['Male'] = True; 
+    demo['Siames']['POC'] = True;
+    demo['Siames']['British'] = False; #Argentenian
+    demo['Siames']['genre'] = POP;
+    demo['Siames']['discovery'] = MUSIC_LEAGUE; #music league
+    demo['Siames']['Seen_Live'] = False;
+    demo['Siames']['Kimi'] = True;
+    
+    demo['Hard_Fi'] = dict()
+    demo['Hard_Fi']['Male'] = True; 
+    demo['Hard_Fi']['POC'] = False;
+    demo['Hard_Fi']['British'] = True;
+    demo['Hard_Fi']['genre'] = OLD_DAYS;
+    demo['Hard_Fi']['discovery'] = BRIAN;
+    demo['Hard_Fi']['Seen_Live'] = False;
+    demo['Hard_Fi']['Kimi'] = False;
+    
+    demo['Dan_Deacon'] = dict()
+    demo['Dan_Deacon']['Male'] = True; 
+    demo['Dan_Deacon']['POC'] = False;
+    demo['Dan_Deacon']['British'] = False;
+    demo['Dan_Deacon']['genre'] = INDIE;
+    demo['Dan_Deacon']['discovery'] = MUSIC_LEAGUE;
+    demo['Dan_Deacon']['Seen_Live'] = False;
+    demo['Dan_Deacon']['Kimi'] = False;
+    
+    demo['Dan_Deacon'] = dict()
+    demo['Dan_Deacon']['Male'] = True; 
+    demo['Dan_Deacon']['POC'] = False;
+    demo['Dan_Deacon']['British'] = False;
+    demo['Dan_Deacon']['genre'] = INDIE;
+    demo['Dan_Deacon']['discovery'] = MUSIC_LEAGUE;
+    demo['Dan_Deacon']['Seen_Live'] = False;
+    demo['Dan_Deacon']['Kimi'] = False;
+    
+    demo['Tengger_Cavalry'] = dict()
+    demo['Tengger_Cavalry']['Male'] = True; 
+    demo['Tengger_Cavalry']['POC'] = True;
+    demo['Tengger_Cavalry']['British'] = False;
+    demo['Tengger_Cavalry']['genre'] = INDIE; #wtf genre is this, I don't have an "other"...maybe I need?
+    demo['Tengger_Cavalry']['discovery'] = MUSIC_LEAGUE;
+    demo['Tengger_Cavalry']['Seen_Live'] = False;
+    demo['Tengger_Cavalry']['Kimi'] = False;
+    
+    demo['Britney_Spears'] = dict()
+    demo['Britney_Spears']['Male'] = False; 
+    demo['Britney_Spears']['POC'] = False;
+    demo['Britney_Spears']['British'] = False;
+    demo['Britney_Spears']['genre'] = POP;
+    demo['Britney_Spears']['discovery'] = ON_MY_OWN_OTHER;  #tiktok
+    demo['Britney_Spears']['Seen_Live'] = False;
+    demo['Britney_Spears']['Kimi'] = False;
+    
+    demo['Armor_for_Sleep'] = dict()
+    demo['Armor_for_Sleep']['Male'] = True; 
+    demo['Armor_for_Sleep']['POC'] = False;
+    demo['Armor_for_Sleep']['British'] = False;
+    demo['Armor_for_Sleep']['genre'] = EMO;
+    demo['Armor_for_Sleep']['discovery'] = ON_MY_OWN_EMO;
+    demo['Armor_for_Sleep']['Seen_Live'] = True;
+    demo['Armor_for_Sleep']['Kimi'] = False;
+    
+    demo['The_Fall_Troy'] = dict()
+    demo['The_Fall_Troy']['Male'] = True; 
+    demo['The_Fall_Troy']['POC'] = False;
+    demo['The_Fall_Troy']['British'] = False;
+    demo['The_Fall_Troy']['genre'] = EMO;
+    demo['The_Fall_Troy']['discovery'] = ON_MY_OWN_EMO;
+    demo['The_Fall_Troy']['Seen_Live'] = False;
+    demo['The_Fall_Troy']['Kimi'] = False;
+    
+    demo['Nova_Twins'] = dict()
+    demo['Nova_Twins']['Male'] = False; 
+    demo['Nova_Twins']['POC'] = True;
+    demo['Nova_Twins']['British'] = True;
+    demo['Nova_Twins']['genre'] = EMO;
+    demo['Nova_Twins']['discovery'] = BRIAN;
+    demo['Nova_Twins']['Seen_Live'] = False;
+    demo['Nova_Twins']['Kimi'] = False;
+    
+    demo['Caroline_Rose'] = dict()
+    demo['Caroline_Rose']['Male'] = False; 
+    demo['Caroline_Rose']['POC'] = False;
+    demo['Caroline_Rose']['British'] = False;
+    demo['Caroline_Rose']['genre'] = INDIE;
+    demo['Caroline_Rose']['discovery'] = KIMI;
+    demo['Caroline_Rose']['Seen_Live'] = False;
+    demo['Caroline_Rose']['Kimi'] = True;
+    
+    demo['Finch'] = dict()
+    demo['Finch']['Male'] = True; 
+    demo['Finch']['POC'] = False;
+    demo['Finch']['British'] = False;
+    demo['Finch']['genre'] = POP;  #It's more like eletronic
+    demo['Finch']['discovery'] = ON_MY_OWN_OTHER;
+    demo['Finch']['Seen_Live'] = False;
+    demo['Finch']['Kimi'] = False;
+    
+    demo['The_Ophelias'] = dict()
+    demo['The_Ophelias']['Male'] = False; 
+    demo['The_Ophelias']['POC'] = False;
+    demo['The_Ophelias']['British'] = False;
+    demo['The_Ophelias']['genre'] = INDIE;  #It's more like eletronic
+    demo['The_Ophelias']['discovery'] = BRIAN;
+    demo['The_Ophelias']['Seen_Live'] = False;
+    demo['The_Ophelias']['Kimi'] = False;
+    
+    demo['Linkin_Park'] = dict()
+    demo['Linkin_Park']['Male'] = True; 
+    demo['Linkin_Park']['POC'] = False;
+    demo['Linkin_Park']['British'] = False;
+    demo['Linkin_Park']['genre'] = EMO; 
+    demo['Linkin_Park']['discovery'] = ON_MY_OWN_EMO;
+    demo['Linkin_Park']['Seen_Live'] = False;
+    demo['Linkin_Park']['Kimi'] = False;
+
+    demo['King_Princess'] = dict()
+    demo['King_Princess']['Male'] = False; 
+    demo['King_Princess']['POC'] = False;
+    demo['King_Princess']['British'] = False;
+    demo['King_Princess']['genre'] = INDIE; 
+    demo['King_Princess']['discovery'] = ON_MY_OWN_CONCERT;
+    demo['King_Princess']['Seen_Live'] = True;
+    demo['King_Princess']['Kimi'] = False;
+    
+    demo['Little_Dragon'] = dict()
+    demo['Little_Dragon']['Male'] = False; 
+    demo['Little_Dragon']['POC'] = False;
+    demo['Little_Dragon']['British'] = False; #They are swedish i think
+    demo['Little_Dragon']['genre'] = INDIE; 
+    demo['Little_Dragon']['discovery'] = BRIAN;
+    demo['Little_Dragon']['Seen_Live'] = False;
+    demo['Little_Dragon']['Kimi'] = False;
+    
+    demo['MGMT'] = dict()
+    demo['MGMT']['Male'] = True; 
+    demo['MGMT']['POC'] = False;
+    demo['MGMT']['British'] = False;
+    demo['MGMT']['genre'] = INDIE; 
+    demo['MGMT']['discovery'] = OLD_DAYS;
+    demo['MGMT']['Seen_Live'] = True;
+    demo['MGMT']['Kimi'] = False;
+    
+    demo['slowthai'] = dict()
+    demo['slowthai']['Male'] = True; 
+    demo['slowthai']['POC'] = False;
+    demo['slowthai']['British'] = True;
+    demo['slowthai']['genre'] = HIPHOP; 
+    demo['slowthai']['discovery'] = BRIAN;
+    demo['slowthai']['Seen_Live'] = False;
+    demo['slowthai']['Kimi'] = False;
+
+    demo['The_Joy_Formidable'] = dict()
+    demo['The_Joy_Formidable']['Male'] = False; 
+    demo['The_Joy_Formidable']['POC'] = False;
+    demo['The_Joy_Formidable']['British'] = True;
+    demo['The_Joy_Formidable']['genre'] = INDIE;
+    demo['The_Joy_Formidable']['discovery'] = OLD_DAYS;
+    demo['The_Joy_Formidable']['Seen_Live'] = True;
+    demo['The_Joy_Formidable']['Kimi'] = False;
+    
+    demo['The_Knife'] = dict()
+    demo['The_Knife']['Male'] = False; 
+    demo['The_Knife']['POC'] = False;
+    demo['The_Knife']['British'] = False; #Swedish
+    demo['The_Knife']['genre'] = INDIE;
+    demo['The_Knife']['discovery'] = OLD_DAYS;
+    demo['The_Knife']['Seen_Live'] = False;
+    demo['The_Knife']['Kimi'] = False;
+
+    demo['Lincoln_Park'] = dict()
+    demo['Lincoln_Park']['Male'] = True; 
+    demo['Lincoln_Park']['POC'] = False;
+    demo['Lincoln_Park']['British'] = False;
+    demo['Lincoln_Park']['genre'] = EMO;
+    demo['Lincoln_Park']['discovery'] = ON_MY_OWN_EMO;
+    demo['Lincoln_Park']['Seen_Live'] = False;
+    demo['Lincoln_Park']['Kimi'] = False;
+    
+    demo['Periphery'] = dict()
+    demo['Periphery']['Male'] = True; 
+    demo['Periphery']['POC'] = False;
+    demo['Periphery']['British'] = False;
+    demo['Periphery']['genre'] = EMO;
+    demo['Periphery']['discovery'] = ON_MY_OWN_OTHER;  #Chris...I don't have a category for other friends ha ha
+    demo['Periphery']['Seen_Live'] = False;
+    demo['Periphery']['Kimi'] = False;
+    
+    demo['Slipknot'] = dict()
+    demo['Slipknot']['Male'] = True; 
+    demo['Slipknot']['POC'] = False;
+    demo['Slipknot']['British'] = False;
+    demo['Slipknot']['genre'] = EMO;
+    demo['Slipknot']['discovery'] = ON_MY_OWN_EMO;
+    demo['Slipknot']['Seen_Live'] = False;
+    demo['Slipknot']['Kimi'] = False;
+    
+    demo['Origami_Angel'] = dict()
+    demo['Origami_Angel']['Male'] = True; 
+    demo['Origami_Angel']['POC'] = False;
+    demo['Origami_Angel']['British'] = False;
+    demo['Origami_Angel']['genre'] = EMO;
+    demo['Origami_Angel']['discovery'] = BRIAN;
+    demo['Origami_Angel']['Seen_Live'] = False;
+    demo['Origami_Angel']['Kimi'] = False;
+    
+    demo['Little_Big'] = dict()
+    demo['Little_Big']['Male'] = True; 
+    demo['Little_Big']['POC'] = False;
+    demo['Little_Big']['British'] = False;
+    demo['Little_Big']['genre'] = POP;
+    demo['Little_Big']['discovery'] = ON_MY_OWN_TV;
+    demo['Little_Big']['Seen_Live'] = False;
+    demo['Little_Big']['Kimi'] = False;
+    
+    demo['Voxtrot'] = dict()
+    demo['Voxtrot']['Male'] = True; 
+    demo['Voxtrot']['POC'] = False;
+    demo['Voxtrot']['British'] = False;
+    demo['Voxtrot']['genre'] = INDIE;
+    demo['Voxtrot']['discovery'] = OLD_DAYS;
+    demo['Voxtrot']['Seen_Live'] = False;
+    demo['Voxtrot']['Kimi'] = False;
+    
+    demo['Model_Actriz'] = dict()
+    demo['Model_Actriz']['Male'] = True; 
+    demo['Model_Actriz']['POC'] = False;
+    demo['Model_Actriz']['British'] = False;
+    demo['Model_Actriz']['genre'] = EMO;
+    demo['Model_Actriz']['discovery'] = MUSIC_LEAGUE;
+    demo['Model_Actriz']['Seen_Live'] = False;
+    demo['Model_Actriz']['Kimi'] = False;
+    
+    demo['Defeater'] = dict()
+    demo['Defeater']['Male'] = True; 
+    demo['Defeater']['POC'] = False;
+    demo['Defeater']['British'] = False;
+    demo['Defeater']['genre'] = EMO;
+    demo['Defeater']['discovery'] = ON_MY_OWN_OTHER; #jordan's friend with the leather jacket
+    demo['Defeater']['Seen_Live'] = False;
+    demo['Defeater']['Kimi'] = False;
+    
+    demo['Thundercat'] = dict()
+    demo['Thundercat']['Male'] = True; 
+    demo['Thundercat']['POC'] = True;
+    demo['Thundercat']['British'] = False;
+    demo['Thundercat']['genre'] = POP;
+    demo['Thundercat']['discovery'] = KIMI;
+    demo['Thundercat']['Seen_Live'] = False;
+    demo['Thundercat']['Kimi'] = True;
 
     # demo[''] = dict()
     # demo['']['Male'] = True; 
@@ -1305,7 +1865,6 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     # demo['']['discovery'] = BRIAN;
     # demo['']['Seen_Live'] = False;
     # demo['']['Kimi'] = False;
-
 
 
     return demo, genreNames, discoveryMethodNames

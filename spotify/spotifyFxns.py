@@ -4,9 +4,9 @@ import numpy
 
 def addArtist(artists, artistName, rank):
 
-    artisitsExisting = list(artists.keys())
+    artistsExisting = list(artists.keys())
 
-    if not (artistName in artisitsExisting):
+    if not (artistName in artistsExisting):
         artists[artistName] = []
         
     artists[artistName].append(rank)    
@@ -17,9 +17,9 @@ def addArtist(artists, artistName, rank):
 
 def incrementSong(songs, artistName, numTimes):
 
-    artisitsExisting = list(songs.keys())
+    artistsExisting = list(songs.keys())
     
-    if (artistName in artisitsExisting):
+    if (artistName in artistsExisting):
         songs[artistName] = songs[artistName] + numTimes
     else:
         songs[artistName] = numTimes

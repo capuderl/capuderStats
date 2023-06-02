@@ -1,6 +1,7 @@
 #from spotifyFxns import *
 from spotifyStats_2021 import *
 from spotifyStats_2022 import *
+from spotifyStats_2023 import *
 from spotifyArtistDemo import *
 from math import floor, ceil
 import warnings
@@ -12,9 +13,12 @@ def fprintf(stream, format_spec, *args):
 artists = dict()
 songs = dict()
 
-[songs,artists] = spotify_stats_2021(songs,artists)
+#[songs,artists] = spotify_stats_2021(songs,artists)
 
-[songs,artists] = spotify_stats_2022(songs,artists)
+#[songs,artists] = spotify_stats_2022(songs,artists)
+
+[songs,artists] = spotify_stats_2023(songs,artists)
+
 
 ############################# PRINTOUT
 
@@ -26,7 +30,7 @@ fprintf(sys.stdout, '\n\nSongs:\n')
 fn = list(songs.keys())
 songCount = numpy.array([0] * len(fn))
 for iS in range(len(fn)):
-   songCount[iS] = songs[fn[iS]];
+   songCount[iS] = songs[fn[iS]]
 idxSort = numpy.argsort(-songCount) #minus sign is to make it descending
 for iS in idxSort:
    fprintf(sys.stdout, '%s:  %d\n', fn[iS].ljust(padSpaces), songs[fn[iS]]);
@@ -124,8 +128,8 @@ songsByTop5 = songCount[idxHighlight];
 #Everything not in the top 5
 #idxEverythingElse = range(len(songCount)).difference(idxHighlight) 
 idxEverythingElse = list(range(len(songCount)))
-for i in idxHighlight:
-    idxEverythingElse.pop(i) 
+for i in numpy.sort(-idxHighlight):
+    idxEverythingElse.pop(abs(i)) 
 #songsByTop5.append(sum(songCount[idxEverythingElse]))
 songsByTop5 = numpy.append(songsByTop5, sum(songCount[idxEverythingElse]))
 labelsPie = [fnSong[i].replace('_', ' ') for i in idxHighlight]
@@ -170,7 +174,7 @@ for iA in range(len(fnArtist)):
 row = numRowsPie-1
 col = numColsPie-1
 #How many artists do I want to call out
-howManyHighlight = 6;
+howManyHighlight = 7;
 artistLength = numpy.array(len(fnArtist) * [0])
 for iA in range(len(fnArtist)):
     artistLength[iA] = artists[fnArtist[iA]].count(1);
@@ -180,8 +184,8 @@ songsByTop5 = artistLength[idxHighlight];
 #Everything not in the top 5
 #idxEverythingElse = range(len(songCount)).difference(idxHighlight) 
 idxEverythingElse = list(range(len(artistLength)))
-for i in idxHighlight:
-    idxEverythingElse.pop(i) 
+for i in numpy.sort(-idxHighlight):
+    idxEverythingElse.pop(abs(i))
 songsByTop5 = numpy.append(songsByTop5, sum(artistLength[idxEverythingElse]))
 labelsPie = [fnArtist[i].replace('_', ' ') for i in idxHighlight]
 labelsPie.append('Other')
@@ -197,7 +201,7 @@ fig.suptitle('Count of Artist in Number one Spot', fontsize=16)
 row = numRowsPie-1
 col = numColsPie-1
 #How many artists do I want to call out
-howManyHighlight = 7;
+howManyHighlight = 7; #7
 artistLength = numpy.array(len(fnArtist) * [0])
 for iA in range(len(fnArtist)):
     artistLength[iA] = len(artists[fnArtist[iA]]);
@@ -206,8 +210,8 @@ idxHighlight = idxSort[range(howManyHighlight)]
 songsByTop5 = artistLength[idxHighlight];
 #Everything not in the top 5
 idxEverythingElse = list(range(len(artistLength)))
-for i in idxHighlight:
-    idxEverythingElse.pop(i) 
+for i in numpy.sort(-idxHighlight):
+    idxEverythingElse.pop(abs(i))
 songsByTop5 = numpy.append(songsByTop5, sum(artistLength[idxEverythingElse]))
 labelsPie = [fnArtist[i].replace('_', ' ') for i in idxHighlight]
 labelsPie.append('Other')
