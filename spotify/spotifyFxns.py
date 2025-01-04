@@ -85,6 +85,7 @@ def spotifyAggregate2Pie(aggregate, genreNames, discoveryMethodNames, countryNam
                 labelsPie = list(reversed(labelsPie))
 
         #print(valCount) 
+        #print(labelsPie)
         axs[row, col].pie(numpy.array(valCount), labels = labelsPie, startangle=90 , textprops={'fontsize': 8})
         
     #plt.show()            

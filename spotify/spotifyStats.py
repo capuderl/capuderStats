@@ -2,6 +2,8 @@
 from spotifyStats_2021 import *
 from spotifyStats_2022 import *
 from spotifyStats_2023 import *
+from spotifyStats_2024 import *
+from spotifyStats_2025 import *
 from spotifyArtistDemo import *
 from math import floor, ceil
 import warnings
@@ -17,8 +19,9 @@ songs = dict()
 
 #[songs,artists] = spotify_stats_2022(songs,artists)
 
-[songs,artists] = spotify_stats_2023(songs,artists)
+#[songs,artists] = spotify_stats_2023(songs,artists)
 
+[songs,artists] = spotify_stats_2024(songs,artists)
 
 ############################# PRINTOUT
 
@@ -201,7 +204,7 @@ fig.suptitle('Count of Artist in Number one Spot', fontsize=16)
 row = numRowsPie-1
 col = numColsPie-1
 #How many artists do I want to call out
-howManyHighlight = 7; #7
+howManyHighlight = 9; #7
 artistLength = numpy.array(len(fnArtist) * [0])
 for iA in range(len(fnArtist)):
     artistLength[iA] = len(artists[fnArtist[iA]]);

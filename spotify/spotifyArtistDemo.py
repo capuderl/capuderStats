@@ -15,7 +15,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     R_AND_B = 6
     
     #Where is the artist from?  "British" used to be a boollean
-    countryNames = ['USA', 'England', 'Canada', 'Sweden', 'Australia', 'Netherlands', 'Mongolia', 'Germany', 'Russia', 'Other']
+    countryNames = ['USA', 'England', 'Canada', 'Sweden', 'Australia', 'Netherlands', 'Mongolia', 'Germany', 'Russia', 'France', 'NewZealand', 'China', 'Norway', 'Romania', 'Spain', 'Venezuela', 'Ireland', 'Belgium', 'Other']
     USA = 0
     ENGLAND = 1
     CANADA = 2 
@@ -25,7 +25,16 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     MONGOLIA = 6
     GERMANY = 7
     RUSSIA = 8
-    COUNTRY_OTHER = 9
+    FRANCE = 9
+    NEW_ZEALAND = 10
+    CHINA = 11
+    NORWAY = 12
+    ROMANIA = 13
+    SPAIN = 14
+    VENEZUELA = 15
+    IRELAND = 16
+    BELGIUM = 17
+    COUNTRY_OTHER = 18
     assert countryNames[-1] == 'Other', 'Functions down the line assume that Other is last'
 
     if breakOutOnMyOwn:
@@ -203,7 +212,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Childish_Gambino']['country'] = USA;
     demo['Childish_Gambino']['genre'] = HIPHOP;
     demo['Childish_Gambino']['discovery'] = ON_MY_OWN_HIP_HOP;
-    demo['Childish_Gambino']['Seen_Live'] = False;
+    demo['Childish_Gambino']['Seen_Live'] = True;
     demo['Childish_Gambino']['Kimi'] = True;
 
     demo['Coin'] = dict()
@@ -1065,7 +1074,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['One_Hundred_Gecs']['Male'] = False; 
     demo['One_Hundred_Gecs']['POC'] = False;
     demo['One_Hundred_Gecs']['country'] = USA;
-    demo['One_Hundred_Gecs']['genre'] = INDIE;
+    demo['One_Hundred_Gecs']['genre'] = POP;
     demo['One_Hundred_Gecs']['discovery'] = BRIAN;
     demo['One_Hundred_Gecs']['Seen_Live'] = False;
     demo['One_Hundred_Gecs']['Kimi'] = False;
@@ -1427,7 +1436,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Jukebox_the_Ghost']['country'] = USA;
     demo['Jukebox_the_Ghost']['genre'] = INDIE;
     demo['Jukebox_the_Ghost']['discovery'] = MUSIC_LEAGUE; #music league - Nikki
-    demo['Jukebox_the_Ghost']['Seen_Live'] = False;
+    demo['Jukebox_the_Ghost']['Seen_Live'] = True;
     demo['Jukebox_the_Ghost']['Kimi'] = False;
     
     demo['AJR'] = dict()
@@ -1559,7 +1568,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Born_Ruffians'] = dict()
     demo['Born_Ruffians']['Male'] = True; 
     demo['Born_Ruffians']['POC'] = False;
-    demo['Born_Ruffians']['country'] = USA;
+    demo['Born_Ruffians']['country'] = CANADA;
     demo['Born_Ruffians']['genre'] = INDIE;
     demo['Born_Ruffians']['discovery'] = OLD_DAYS;
     demo['Born_Ruffians']['Seen_Live'] = False;
@@ -1632,8 +1641,8 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Hard_Fi']['Male'] = True; 
     demo['Hard_Fi']['POC'] = False;
     demo['Hard_Fi']['country'] = ENGLAND;
-    demo['Hard_Fi']['genre'] = OLD_DAYS;
-    demo['Hard_Fi']['discovery'] = BRIAN;
+    demo['Hard_Fi']['genre'] = INDIE;
+    demo['Hard_Fi']['discovery'] = OLD_DAYS;
     demo['Hard_Fi']['Seen_Live'] = False;
     demo['Hard_Fi']['Kimi'] = False;
     
@@ -1697,7 +1706,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Caroline_Rose']['country'] = USA;
     demo['Caroline_Rose']['genre'] = INDIE;
     demo['Caroline_Rose']['discovery'] = KIMI;
-    demo['Caroline_Rose']['Seen_Live'] = False;
+    demo['Caroline_Rose']['Seen_Live'] = True;
     demo['Caroline_Rose']['Kimi'] = True;
     
     demo['Finch'] = dict()
@@ -1840,7 +1849,7 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Model_Actriz']['POC'] = False;
     demo['Model_Actriz']['country'] = USA;
     demo['Model_Actriz']['genre'] = EMO;
-    demo['Model_Actriz']['discovery'] = MUSIC_LEAGUE;
+    demo['Model_Actriz']['discovery'] = BRIAN;
     demo['Model_Actriz']['Seen_Live'] = False;
     demo['Model_Actriz']['Kimi'] = False;
     
@@ -1861,6 +1870,855 @@ def spotifyArtistDemo(breakOutOnMyOwn):
     demo['Thundercat']['discovery'] = KIMI;
     demo['Thundercat']['Seen_Live'] = False;
     demo['Thundercat']['Kimi'] = True;
+    
+    demo['A_Tribe_Called_Quest'] = dict()
+    demo['A_Tribe_Called_Quest']['Male'] = True; 
+    demo['A_Tribe_Called_Quest']['POC'] = True;
+    demo['A_Tribe_Called_Quest']['country'] = USA;
+    demo['A_Tribe_Called_Quest']['genre'] = HIPHOP;
+    demo['A_Tribe_Called_Quest']['discovery'] = ON_MY_OWN_TV;
+    demo['A_Tribe_Called_Quest']['Seen_Live'] = False;
+    demo['A_Tribe_Called_Quest']['Kimi'] = False;
+    
+    demo['Fall_Out_BOy'] = dict()
+    demo['Fall_Out_BOy']['Male'] = True; 
+    demo['Fall_Out_BOy']['POC'] = False;
+    demo['Fall_Out_BOy']['country'] = USA;
+    demo['Fall_Out_BOy']['genre'] = EMO;
+    demo['Fall_Out_BOy']['discovery'] = KIMI;
+    demo['Fall_Out_BOy']['Seen_Live'] = False;
+    demo['Fall_Out_BOy']['Kimi'] = True;
+    
+    demo['Geese'] = dict()
+    demo['Geese']['Male'] = True; 
+    demo['Geese']['POC'] = False;
+    demo['Geese']['country'] = USA;
+    demo['Geese']['genre'] = INDIE;
+    demo['Geese']['discovery'] = BRIAN;
+    demo['Geese']['Seen_Live'] = False;
+    demo['Geese']['Kimi'] = False;
+    
+    demo['Foushee'] = dict()
+    demo['Foushee']['Male'] = False; 
+    demo['Foushee']['POC'] = True;
+    demo['Foushee']['country'] = USA;
+    demo['Foushee']['genre'] = HIPHOP;
+    demo['Foushee']['discovery'] = ON_MY_OWN_CONCERT;
+    demo['Foushee']['Seen_Live'] = True;
+    demo['Foushee']['Kimi'] = False;
+    
+    demo['Raye'] = dict()
+    demo['Raye']['Male'] = False; 
+    demo['Raye']['POC'] = True;
+    demo['Raye']['country'] = USA;
+    demo['Raye']['genre'] = INDIE;
+    demo['Raye']['discovery'] = KIMI;
+    demo['Raye']['Seen_Live'] = True;
+    demo['Raye']['Kimi'] = True;
+    
+    demo['A_Day_To_Remember'] = dict()
+    demo['A_Day_To_Remember']['Male'] = True; 
+    demo['A_Day_To_Remember']['POC'] = False;
+    demo['A_Day_To_Remember']['country'] = USA;
+    demo['A_Day_To_Remember']['genre'] = EMO;
+    demo['A_Day_To_Remember']['discovery'] = MUSIC_LEAGUE;
+    demo['A_Day_To_Remember']['Seen_Live'] = False;
+    demo['A_Day_To_Remember']['Kimi'] = False;
+    
+    demo['Hail_the_Sun'] = dict()
+    demo['Hail_the_Sun']['Male'] = True; 
+    demo['Hail_the_Sun']['POC'] = False;
+    demo['Hail_the_Sun']['country'] = USA;
+    demo['Hail_the_Sun']['genre'] = EMO;
+    demo['Hail_the_Sun']['discovery'] = ON_MY_OWN_OTHER;  #Chris...I don't have a category for other friends ha ha
+    demo['Hail_the_Sun']['Seen_Live'] = True;
+    demo['Hail_the_Sun']['Kimi'] = False;
+    
+    demo['Three_Days_Grace'] = dict()
+    demo['Three_Days_Grace']['Male'] = True; 
+    demo['Three_Days_Grace']['POC'] = False;
+    demo['Three_Days_Grace']['country'] = USA;
+    demo['Three_Days_Grace']['genre'] = EMO;
+    demo['Three_Days_Grace']['discovery'] = ON_MY_OWN_EMO;
+    demo['Three_Days_Grace']['Seen_Live'] = False;
+    demo['Three_Days_Grace']['Kimi'] = False;
+    
+    demo['The_Used'] = dict()
+    demo['The_Used']['Male'] = True; 
+    demo['The_Used']['POC'] = False;
+    demo['The_Used']['country'] = USA;
+    demo['The_Used']['genre'] = EMO;
+    demo['The_Used']['discovery'] = MUSIC_LEAGUE;
+    demo['The_Used']['Seen_Live'] = False;
+    demo['The_Used']['Kimi'] = False;
+    
+    demo['Girl_Scout'] = dict()
+    demo['Girl_Scout']['Male'] = False; 
+    demo['Girl_Scout']['POC'] = False;
+    demo['Girl_Scout']['country'] = USA;
+    demo['Girl_Scout']['genre'] = INDIE;
+    demo['Girl_Scout']['discovery'] = BRIAN;
+    demo['Girl_Scout']['Seen_Live'] = False;
+    demo['Girl_Scout']['Kimi'] = False;
+    
+    demo['Fall_Out_Boy'] = dict()
+    demo['Fall_Out_Boy']['Male'] = True; 
+    demo['Fall_Out_Boy']['POC'] = False;
+    demo['Fall_Out_Boy']['country'] = USA;
+    demo['Fall_Out_Boy']['genre'] = EMO;
+    demo['Fall_Out_Boy']['discovery'] = KIMI;
+    demo['Fall_Out_Boy']['Seen_Live'] = False;
+    demo['Fall_Out_Boy']['Kimi'] = True;
+    
+    demo['Frank_Zappa'] = dict()
+    demo['Frank_Zappa']['Male'] = True; 
+    demo['Frank_Zappa']['POC'] = False;
+    demo['Frank_Zappa']['country'] = USA;
+    demo['Frank_Zappa']['genre'] = OLD;
+    demo['Frank_Zappa']['discovery'] = MUSIC_LEAGUE; #Geoff
+    demo['Frank_Zappa']['Seen_Live'] = False;
+    demo['Frank_Zappa']['Kimi'] = False;
+    
+    demo['Lake_Street_Dive'] = dict()
+    demo['Lake_Street_Dive']['Male'] = False; 
+    demo['Lake_Street_Dive']['POC'] = False;
+    demo['Lake_Street_Dive']['country'] = USA;
+    demo['Lake_Street_Dive']['genre'] = INDIE;
+    demo['Lake_Street_Dive']['discovery'] = MUSIC_LEAGUE;
+    demo['Lake_Street_Dive']['Seen_Live'] = False;
+    demo['Lake_Street_Dive']['Kimi'] = False;
+    
+    demo['Lynks'] = dict()
+    demo['Lynks']['Male'] = True; 
+    demo['Lynks']['POC'] = False;
+    demo['Lynks']['country'] = ENGLAND;
+    demo['Lynks']['genre'] = INDIE;
+    demo['Lynks']['discovery'] = BRIAN;
+    demo['Lynks']['Seen_Live'] = False;
+    demo['Lynks']['Kimi'] = False;
+    
+    demo['Jens_Lekman'] = dict()
+    demo['Jens_Lekman']['Male'] = True; 
+    demo['Jens_Lekman']['POC'] = False;
+    demo['Jens_Lekman']['country'] = SWEDEN;
+    demo['Jens_Lekman']['genre'] = INDIE;
+    demo['Jens_Lekman']['discovery'] = MUSIC_LEAGUE;
+    demo['Jens_Lekman']['Seen_Live'] = False;
+    demo['Jens_Lekman']['Kimi'] = False;
+    
+    demo['Mandy_Moore'] = dict()
+    demo['Mandy_Moore']['Male'] = False; 
+    demo['Mandy_Moore']['POC'] = False;
+    demo['Mandy_Moore']['country'] = USA;
+    demo['Mandy_Moore']['genre'] = POP;
+    demo['Mandy_Moore']['discovery'] = MUSIC_LEAGUE;
+    demo['Mandy_Moore']['Seen_Live'] = False;
+    demo['Mandy_Moore']['Kimi'] = True;
+    
+    demo['Alexisonfire'] = dict()
+    demo['Alexisonfire']['Male'] = True; 
+    demo['Alexisonfire']['POC'] = False;
+    demo['Alexisonfire']['country'] = CANADA;
+    demo['Alexisonfire']['genre'] = EMO;
+    demo['Alexisonfire']['discovery'] = ON_MY_OWN_EMO; #Adi at emo night
+    demo['Alexisonfire']['Seen_Live'] = False;
+    demo['Alexisonfire']['Kimi'] = False;
+    
+    demo['Underoath'] = dict()
+    demo['Underoath']['Male'] = True; 
+    demo['Underoath']['POC'] = False;
+    demo['Underoath']['country'] = USA;
+    demo['Underoath']['genre'] = EMO;
+    demo['Underoath']['discovery'] = ON_MY_OWN_EMO;  #emo night
+    demo['Underoath']['Seen_Live'] = False;
+    demo['Underoath']['Kimi'] = False;
+    
+    demo['Thank_You_Scientist'] = dict()
+    demo['Thank_You_Scientist']['Male'] = True; 
+    demo['Thank_You_Scientist']['POC'] = False;
+    demo['Thank_You_Scientist']['country'] = USA;
+    demo['Thank_You_Scientist']['genre'] = INDIE;
+    demo['Thank_You_Scientist']['discovery'] = MUSIC_LEAGUE; #Chris!
+    demo['Thank_You_Scientist']['Seen_Live'] = False;
+    demo['Thank_You_Scientist']['Kimi'] = False;
+    
+    demo['Blood_Orange'] = dict()
+    demo['Blood_Orange']['Male'] = True; 
+    demo['Blood_Orange']['POC'] = True;
+    demo['Blood_Orange']['country'] = ENGLAND;
+    demo['Blood_Orange']['genre'] = INDIE;
+    demo['Blood_Orange']['discovery'] = MUSIC_LEAGUE;
+    demo['Blood_Orange']['Seen_Live'] = False;
+    demo['Blood_Orange']['Kimi'] = True;
+    
+    demo['Sleep_Token'] = dict()
+    demo['Sleep_Token']['Male'] = True; 
+    demo['Sleep_Token']['POC'] = False;
+    demo['Sleep_Token']['country'] = ENGLAND;
+    demo['Sleep_Token']['genre'] = EMO;
+    demo['Sleep_Token']['discovery'] = ON_MY_OWN_OTHER;  #Chris!
+    demo['Sleep_Token']['Seen_Live'] = False;
+    demo['Sleep_Token']['Kimi'] = False;
+    
+    demo['Christine_and_the_Queens'] = dict()
+    demo['Christine_and_the_Queens']['Male'] = False; 
+    demo['Christine_and_the_Queens']['POC'] = False;
+    demo['Christine_and_the_Queens']['country'] = FRANCE;
+    demo['Christine_and_the_Queens']['genre'] = INDIE;
+    demo['Christine_and_the_Queens']['discovery'] = BRIAN;
+    demo['Christine_and_the_Queens']['Seen_Live'] = False;
+    demo['Christine_and_the_Queens']['Kimi'] = True;
+    
+    demo['The_Naked_and_the_Famous'] = dict()
+    demo['The_Naked_and_the_Famous']['Male'] = False; 
+    demo['The_Naked_and_the_Famous']['POC'] = False;
+    demo['The_Naked_and_the_Famous']['country'] = NEW_ZEALAND;
+    demo['The_Naked_and_the_Famous']['genre'] = INDIE;
+    demo['The_Naked_and_the_Famous']['discovery'] = OLD_DAYS;
+    demo['The_Naked_and_the_Famous']['Seen_Live'] = False;
+    demo['The_Naked_and_the_Famous']['Kimi'] = False;
+    
+    demo['Five_for_Fighting'] = dict()
+    demo['Five_for_Fighting']['Male'] = True; 
+    demo['Five_for_Fighting']['POC'] = False;
+    demo['Five_for_Fighting']['country'] = USA;
+    demo['Five_for_Fighting']['genre'] = POP;
+    demo['Five_for_Fighting']['discovery'] = OLD_DAYS;
+    demo['Five_for_Fighting']['Seen_Live'] = False;
+    demo['Five_for_Fighting']['Kimi'] = False;
+    
+    demo['Kavinsky'] = dict()
+    demo['Kavinsky']['Male'] = True; 
+    demo['Kavinsky']['POC'] = False;
+    demo['Kavinsky']['country'] = FRANCE;
+    demo['Kavinsky']['genre'] = INDIE;
+    demo['Kavinsky']['discovery'] = MUSIC_LEAGUE;
+    demo['Kavinsky']['Seen_Live'] = False;
+    demo['Kavinsky']['Kimi'] = False;
+    
+    demo['Kelela'] = dict()
+    demo['Kelela']['Male'] = False; 
+    demo['Kelela']['POC'] = True;
+    demo['Kelela']['country'] = USA;
+    demo['Kelela']['genre'] = R_AND_B;
+    demo['Kelela']['discovery'] = KIMI; #Also a rando on OKCupid
+    demo['Kelela']['Seen_Live'] = False;
+    demo['Kelela']['Kimi'] = True;
+    
+    demo['Beirut'] = dict()
+    demo['Beirut']['Male'] = True; 
+    demo['Beirut']['POC'] = False;
+    demo['Beirut']['country'] = INDIE;
+    demo['Beirut']['genre'] = R_AND_B;
+    demo['Beirut']['discovery'] = OLD_DAYS;
+    demo['Beirut']['Seen_Live'] = False;
+    demo['Beirut']['Kimi'] = False;
+    
+    demo['Sebastien_Tellier'] = dict()
+    demo['Sebastien_Tellier']['Male'] = True; 
+    demo['Sebastien_Tellier']['POC'] = False;
+    demo['Sebastien_Tellier']['country'] = FRANCE;
+    demo['Sebastien_Tellier']['genre'] = INDIE;
+    demo['Sebastien_Tellier']['discovery'] = ON_MY_OWN_OTHER;
+    demo['Sebastien_Tellier']['Seen_Live'] = False;
+    demo['Sebastien_Tellier']['Kimi'] = True;
+    
+    demo['Malik_Djoudi'] = dict()
+    demo['Malik_Djoudi']['Male'] = True; 
+    demo['Malik_Djoudi']['POC'] = False;
+    demo['Malik_Djoudi']['country'] = FRANCE;
+    demo['Malik_Djoudi']['genre'] = INDIE;
+    demo['Malik_Djoudi']['discovery'] = ON_MY_OWN_OTHER;
+    demo['Malik_Djoudi']['Seen_Live'] = False;
+    demo['Malik_Djoudi']['Kimi'] = True;
+   
+    demo['Carly_Cosgrove'] = dict()
+    demo['Carly_Cosgrove']['Male'] = True; 
+    demo['Carly_Cosgrove']['POC'] = False;
+    demo['Carly_Cosgrove']['country'] = USA;
+    demo['Carly_Cosgrove']['genre'] = EMO;
+    demo['Carly_Cosgrove']['discovery'] = ON_MY_OWN_EMO;
+    demo['Carly_Cosgrove']['Seen_Live'] = False;
+    demo['Carly_Cosgrove']['Kimi'] = False;
+    
+    demo['LA_Priest'] = dict()
+    demo['LA_Priest']['Male'] = True; 
+    demo['LA_Priest']['POC'] = False;
+    demo['LA_Priest']['country'] = ENGLAND;
+    demo['LA_Priest']['genre'] = INDIE;
+    demo['LA_Priest']['discovery'] = ON_MY_OWN_OTHER;
+    demo['LA_Priest']['Seen_Live'] = False;
+    demo['LA_Priest']['Kimi'] = True;
+    
+    demo['Freelance_Whales'] = dict()
+    demo['Freelance_Whales']['Male'] = True; 
+    demo['Freelance_Whales']['POC'] = False;
+    demo['Freelance_Whales']['country'] = USA;
+    demo['Freelance_Whales']['genre'] = INDIE;
+    demo['Freelance_Whales']['discovery'] = OLD_DAYS;
+    demo['Freelance_Whales']['Seen_Live'] = True;
+    demo['Freelance_Whales']['Kimi'] = False;
+    
+    demo['Asking_Alexandria'] = dict()
+    demo['Asking_Alexandria']['Male'] = True; 
+    demo['Asking_Alexandria']['POC'] = False;
+    demo['Asking_Alexandria']['country'] = ENGLAND;
+    demo['Asking_Alexandria']['genre'] = EMO;
+    demo['Asking_Alexandria']['discovery'] = ON_MY_OWN_EMO;
+    demo['Asking_Alexandria']['Seen_Live'] = False;
+    demo['Asking_Alexandria']['Kimi'] = False;
+    
+    demo['Nick_Lutsko'] = dict()
+    demo['Nick_Lutsko']['Male'] = True; 
+    demo['Nick_Lutsko']['POC'] = False;
+    demo['Nick_Lutsko']['country'] = USA;
+    demo['Nick_Lutsko']['genre'] = INDIE;
+    demo['Nick_Lutsko']['discovery'] = MUSIC_LEAGUE;
+    demo['Nick_Lutsko']['Seen_Live'] = False;
+    demo['Nick_Lutsko']['Kimi'] = False;
+    
+    demo['Alice_Longyu_Gao'] = dict()
+    demo['Alice_Longyu_Gao']['Male'] = False; 
+    demo['Alice_Longyu_Gao']['POC'] = True;
+    demo['Alice_Longyu_Gao']['country'] = CHINA;
+    demo['Alice_Longyu_Gao']['genre'] = POP;
+    demo['Alice_Longyu_Gao']['discovery'] = KIMI; #Rich bitch juice
+    demo['Alice_Longyu_Gao']['Seen_Live'] = False;
+    demo['Alice_Longyu_Gao']['Kimi'] = True;
+    
+    demo['Stellar_Circuits'] = dict()
+    demo['Stellar_Circuits']['Male'] = True; 
+    demo['Stellar_Circuits']['POC'] = False;
+    demo['Stellar_Circuits']['country'] = USA;
+    demo['Stellar_Circuits']['genre'] = EMO;  #Metal really
+    demo['Stellar_Circuits']['discovery'] = ON_MY_OWN_OTHER; #Chris
+    demo['Stellar_Circuits']['Seen_Live'] = False;
+    demo['Stellar_Circuits']['Kimi'] = False;
+    
+    demo['Currents'] = dict()
+    demo['Currents']['Male'] = True; 
+    demo['Currents']['POC'] = False;
+    demo['Currents']['country'] = USA;
+    demo['Currents']['genre'] = EMO;  #Metal really
+    demo['Currents']['discovery'] = MUSIC_LEAGUE; #Chris
+    demo['Currents']['Seen_Live'] = False;
+    demo['Currents']['Kimi'] = False;
+    
+    demo['Frank_Ocean'] = dict()
+    demo['Frank_Ocean']['Male'] = True; 
+    demo['Frank_Ocean']['POC'] = True;
+    demo['Frank_Ocean']['country'] = USA;
+    demo['Frank_Ocean']['genre'] = R_AND_B;
+    demo['Frank_Ocean']['discovery'] = KIMI;
+    demo['Frank_Ocean']['Seen_Live'] = False;
+    demo['Frank_Ocean']['Kimi'] = True;
+    
+    demo['From_Autumn_to_Ashes'] = dict()
+    demo['From_Autumn_to_Ashes']['Male'] = True; 
+    demo['From_Autumn_to_Ashes']['POC'] = False;
+    demo['From_Autumn_to_Ashes']['country'] = USA;
+    demo['From_Autumn_to_Ashes']['genre'] = EMO;
+    demo['From_Autumn_to_Ashes']['discovery'] = ON_MY_OWN_EMO;
+    demo['From_Autumn_to_Ashes']['Seen_Live'] = False;
+    demo['From_Autumn_to_Ashes']['Kimi'] = False;
+    
+    demo['Scary_Kids_Scaring_Kids'] = dict()
+    demo['Scary_Kids_Scaring_Kids']['Male'] = True; 
+    demo['Scary_Kids_Scaring_Kids']['POC'] = False;
+    demo['Scary_Kids_Scaring_Kids']['country'] = USA;
+    demo['Scary_Kids_Scaring_Kids']['genre'] = EMO;
+    demo['Scary_Kids_Scaring_Kids']['discovery'] = ON_MY_OWN_EMO;
+    demo['Scary_Kids_Scaring_Kids']['Seen_Live'] = False;
+    demo['Scary_Kids_Scaring_Kids']['Kimi'] = False;
+
+    demo['Princess_Nokia'] = dict()
+    demo['Princess_Nokia']['Male'] = False; 
+    demo['Princess_Nokia']['POC'] = True;
+    demo['Princess_Nokia']['country'] = USA;
+    demo['Princess_Nokia']['genre'] = HIPHOP;
+    demo['Princess_Nokia']['discovery'] = MUSIC_LEAGUE;
+    demo['Princess_Nokia']['Seen_Live'] = False;
+    demo['Princess_Nokia']['Kimi'] = False;
+    
+    demo['Noah_Kahan'] = dict()
+    demo['Noah_Kahan']['Male'] = True; 
+    demo['Noah_Kahan']['POC'] = False;
+    demo['Noah_Kahan']['country'] = USA;
+    demo['Noah_Kahan']['genre'] = INDIE;  #folk really...
+    demo['Noah_Kahan']['discovery'] = KIMI;
+    demo['Noah_Kahan']['Seen_Live'] = False;
+    demo['Noah_Kahan']['Kimi'] = True;
+    
+    demo['Rent'] = dict()
+    demo['Rent']['Male'] = True; 
+    demo['Rent']['POC'] = True;
+    demo['Rent']['country'] = USA;
+    demo['Rent']['genre'] = MUSICAL; 
+    demo['Rent']['discovery'] = ON_MY_OWN_MUSICAL;
+    demo['Rent']['Seen_Live'] = True;
+    demo['Rent']['Kimi'] = False;
+    
+    demo['Vince_Staples'] = dict()
+    demo['Vince_Staples']['Male'] = True; 
+    demo['Vince_Staples']['POC'] = True;
+    demo['Vince_Staples']['country'] = USA;
+    demo['Vince_Staples']['genre'] = HIPHOP;  
+    demo['Vince_Staples']['discovery'] = KIMI;
+    demo['Vince_Staples']['Seen_Live'] = False;
+    demo['Vince_Staples']['Kimi'] = True;
+    
+    demo['Kings_of_Convenience'] = dict()
+    demo['Kings_of_Convenience']['Male'] = True; 
+    demo['Kings_of_Convenience']['POC'] = False;
+    demo['Kings_of_Convenience']['country'] = NORWAY;
+    demo['Kings_of_Convenience']['genre'] = INDIE;
+    demo['Kings_of_Convenience']['discovery'] = OLD_DAYS;
+    demo['Kings_of_Convenience']['Seen_Live'] = False;
+    demo['Kings_of_Convenience']['Kimi'] = False;
+    
+    demo['Air'] = dict()
+    demo['Air']['Male'] = True; 
+    demo['Air']['POC'] = False;
+    demo['Air']['country'] = FRANCE;
+    demo['Air']['genre'] = INDIE;
+    demo['Air']['discovery'] = ON_MY_OWN_OTHER; #Erin
+    demo['Air']['Seen_Live'] = False;
+    demo['Air']['Kimi'] = False;
+
+    demo['Tranda'] = dict()
+    demo['Tranda']['Male'] = True; 
+    demo['Tranda']['POC'] = False;
+    demo['Tranda']['country'] = ROMANIA;
+    demo['Tranda']['genre'] = HIPHOP;
+    demo['Tranda']['discovery'] = KIMI;
+    demo['Tranda']['Seen_Live'] = False;
+    demo['Tranda']['Kimi'] = True;
+    
+    demo['Fat_Dog'] = dict()
+    demo['Fat_Dog']['Male'] = True; 
+    demo['Fat_Dog']['POC'] = False;
+    demo['Fat_Dog']['country'] = ENGLAND;
+    demo['Fat_Dog']['genre'] = INDIE;
+    demo['Fat_Dog']['discovery'] = BRIAN;
+    demo['Fat_Dog']['Seen_Live'] = False;
+    demo['Fat_Dog']['Kimi'] = False;
+    
+    demo['Denzel_Curry'] = dict()
+    demo['Denzel_Curry']['Male'] = True; 
+    demo['Denzel_Curry']['POC'] = True;
+    demo['Denzel_Curry']['country'] = USA;
+    demo['Denzel_Curry']['genre'] = HIPHOP;
+    demo['Denzel_Curry']['discovery'] = KIMI;
+    demo['Denzel_Curry']['Seen_Live'] = False;
+    demo['Denzel_Curry']['Kimi'] = True;
+    
+    demo['Justice'] = dict()
+    demo['Justice']['Male'] = True; 
+    demo['Justice']['POC'] = False;
+    demo['Justice']['country'] = FRANCE;
+    demo['Justice']['genre'] = INDIE;
+    demo['Justice']['discovery'] = KIMI;
+    demo['Justice']['Seen_Live'] = False;
+    demo['Justice']['Kimi'] = True;
+    
+    demo['Space_Weather'] = dict()
+    demo['Space_Weather']['Male'] = True; 
+    demo['Space_Weather']['POC'] = False;
+    demo['Space_Weather']['country'] = USA;
+    demo['Space_Weather']['genre'] = EMO;
+    demo['Space_Weather']['discovery'] = ON_MY_OWN_EMO; #spencer
+    demo['Space_Weather']['Seen_Live'] = False;
+    demo['Space_Weather']['Kimi'] = False;
+        
+    demo['Gorillaz'] = dict()
+    demo['Gorillaz']['Male'] = True; 
+    demo['Gorillaz']['POC'] = False;
+    demo['Gorillaz']['country'] = ENGLAND;
+    demo['Gorillaz']['genre'] = INDIE;
+    demo['Gorillaz']['discovery'] = OLD_DAYS;
+    demo['Gorillaz']['Seen_Live'] = False;
+    demo['Gorillaz']['Kimi'] = False;
+    
+    demo['Jakey'] = dict()
+    demo['Jakey']['Male'] = True; 
+    demo['Jakey']['POC'] = False;
+    demo['Jakey']['country'] = USA;
+    demo['Jakey']['genre'] = HIPHOP;
+    demo['Jakey']['discovery'] = MUSIC_LEAGUE;
+    demo['Jakey']['Seen_Live'] = False;
+    demo['Jakey']['Kimi'] = False;
+    
+    demo['Megan_Thee_Stallion'] = dict()
+    demo['Megan_Thee_Stallion']['Male'] = False; 
+    demo['Megan_Thee_Stallion']['POC'] = True;
+    demo['Megan_Thee_Stallion']['country'] = USA;
+    demo['Megan_Thee_Stallion']['genre'] = HIPHOP;
+    demo['Megan_Thee_Stallion']['discovery'] = KIMI;
+    demo['Megan_Thee_Stallion']['Seen_Live'] = False;
+    demo['Megan_Thee_Stallion']['Kimi'] = True;
+    
+    demo['FKA_Twigs'] = dict()
+    demo['FKA_Twigs']['Male'] = False; 
+    demo['FKA_Twigs']['POC'] = True;
+    demo['FKA_Twigs']['country'] = ENGLAND;
+    demo['FKA_Twigs']['genre'] = R_AND_B;
+    demo['FKA_Twigs']['discovery'] = MUSIC_LEAGUE;
+    demo['FKA_Twigs']['Seen_Live'] = False;
+    demo['FKA_Twigs']['Kimi'] = True;
+    
+    demo['Bag_Raiders'] = dict()
+    demo['Bag_Raiders']['Male'] = True; 
+    demo['Bag_Raiders']['POC'] = False;
+    demo['Bag_Raiders']['country'] = AUSTRALIA;
+    demo['Bag_Raiders']['genre'] = INDIE;
+    demo['Bag_Raiders']['discovery'] = ON_MY_OWN_OTHER; #TORO did a cover...
+    demo['Bag_Raiders']['Seen_Live'] = False;
+    demo['Bag_Raiders']['Kimi'] = True;
+    
+    demo['Anna_Meredith'] = dict()
+    demo['Anna_Meredith']['Male'] = False; 
+    demo['Anna_Meredith']['POC'] = False;
+    demo['Anna_Meredith']['country'] = ENGLAND;
+    demo['Anna_Meredith']['genre'] = INDIE;
+    demo['Anna_Meredith']['discovery'] = BRIAN; 
+    demo['Anna_Meredith']['Seen_Live'] = False;
+    demo['Anna_Meredith']['Kimi'] = False;
+    
+    demo['Julian_Plenti'] = dict()
+    demo['Julian_Plenti']['Male'] = True; 
+    demo['Julian_Plenti']['POC'] = False;
+    demo['Julian_Plenti']['country'] = USA;
+    demo['Julian_Plenti']['genre'] = INDIE;
+    demo['Julian_Plenti']['discovery'] = OLD_DAYS; 
+    demo['Julian_Plenti']['Seen_Live'] = False;
+    demo['Julian_Plenti']['Kimi'] = False;
+    
+    demo['Hugh_Jackman'] = dict()
+    demo['Hugh_Jackman']['Male'] = True; 
+    demo['Hugh_Jackman']['POC'] = False;
+    demo['Hugh_Jackman']['country'] = AUSTRALIA;
+    demo['Hugh_Jackman']['genre'] = MUSICAL;
+    demo['Hugh_Jackman']['discovery'] = ON_MY_OWN_MUSICAL; 
+    demo['Hugh_Jackman']['Seen_Live'] = False;
+    demo['Hugh_Jackman']['Kimi'] = False;
+    
+    demo['Fun'] = dict()
+    demo['Fun']['Male'] = True; 
+    demo['Fun']['POC'] = False;
+    demo['Fun']['country'] = USA;
+    demo['Fun']['genre'] = INDIE;
+    demo['Fun']['discovery'] = OLD_DAYS; 
+    demo['Fun']['Seen_Live'] = True;
+    demo['Fun']['Kimi'] = False;
+    
+    demo['ROSALIA'] = dict()
+    demo['ROSALIA']['Male'] = False; 
+    demo['ROSALIA']['POC'] = True;
+    demo['ROSALIA']['country'] = SPAIN;
+    demo['ROSALIA']['genre'] = POP; #perreo
+    demo['ROSALIA']['discovery'] = ON_MY_OWN_OTHER; 
+    demo['ROSALIA']['Seen_Live'] = False;
+    demo['ROSALIA']['Kimi'] = False;
+    
+    demo['rEDOLENT'] = dict()
+    demo['rEDOLENT']['Male'] = True; 
+    demo['rEDOLENT']['POC'] = False;
+    demo['rEDOLENT']['country'] = ENGLAND;
+    demo['rEDOLENT']['genre'] = INDIE; 
+    demo['rEDOLENT']['discovery'] = BRIAN; 
+    demo['rEDOLENT']['Seen_Live'] = False;
+    demo['rEDOLENT']['Kimi'] = False;
+    
+    demo['Digitalism'] = dict()
+    demo['Digitalism']['Male'] = True; 
+    demo['Digitalism']['POC'] = False;
+    demo['Digitalism']['country'] = GERMANY;
+    demo['Digitalism']['genre'] = INDIE; 
+    demo['Digitalism']['discovery'] = MUSIC_LEAGUE; #a guess
+    demo['Digitalism']['Seen_Live'] = False;
+    demo['Digitalism']['Kimi'] = False;
+    
+    demo['Bronski_Beat'] = dict()
+    demo['Bronski_Beat']['Male'] = True; 
+    demo['Bronski_Beat']['POC'] = False;
+    demo['Bronski_Beat']['country'] = ENGLAND;
+    demo['Bronski_Beat']['genre'] = INDIE; 
+    demo['Bronski_Beat']['discovery'] = BRIAN; 
+    demo['Bronski_Beat']['Seen_Live'] = False;
+    demo['Bronski_Beat']['Kimi'] = False;
+    
+    demo['Arca'] = dict()
+    demo['Arca']['Male'] = True; 
+    demo['Arca']['POC'] = True;
+    demo['Arca']['country'] = VENEZUELA;
+    demo['Arca']['genre'] = HIPHOP; #Latin trap · reggaeton · alternative reggaeton....doesn't fit anything!
+    demo['Arca']['discovery'] = ON_MY_OWN_OTHER; #perreo awakening
+    demo['Arca']['Seen_Live'] = False;
+    demo['Arca']['Kimi'] = False;
+    
+    demo['Magdalena_Bay'] = dict()
+    demo['Magdalena_Bay']['Male'] = False; 
+    demo['Magdalena_Bay']['POC'] = False;
+    demo['Magdalena_Bay']['country'] = USA;
+    demo['Magdalena_Bay']['genre'] = INDIE; 
+    demo['Magdalena_Bay']['discovery'] = ON_MY_OWN_OTHER; #Sarah
+    demo['Magdalena_Bay']['Seen_Live'] = False;
+    demo['Magdalena_Bay']['Kimi'] = False;
+    
+    demo['Princeton'] = dict()
+    demo['Princeton']['Male'] = True; 
+    demo['Princeton']['POC'] = False;
+    demo['Princeton']['country'] = USA;
+    demo['Princeton']['genre'] = INDIE; 
+    demo['Princeton']['discovery'] = OLD_DAYS; 
+    demo['Princeton']['Seen_Live'] = True;
+    demo['Princeton']['Kimi'] = False;
+    
+    demo['I_Prevail'] = dict()
+    demo['I_Prevail']['Male'] = True; 
+    demo['I_Prevail']['POC'] = False;
+    demo['I_Prevail']['country'] = USA;
+    demo['I_Prevail']['genre'] = EMO; 
+    demo['I_Prevail']['discovery'] = KIMI; 
+    demo['I_Prevail']['Seen_Live'] = False;
+    demo['I_Prevail']['Kimi'] = True;
+    
+    demo['Dora_Jar'] = dict()
+    demo['Dora_Jar']['Male'] = False; 
+    demo['Dora_Jar']['POC'] = False;
+    demo['Dora_Jar']['country'] = USA;
+    demo['Dora_Jar']['genre'] = INDIE; 
+    demo['Dora_Jar']['discovery'] = BRIAN; 
+    demo['Dora_Jar']['Seen_Live'] = True;
+    demo['Dora_Jar']['Kimi'] = False;
+    
+    demo['Moving_Units'] = dict()
+    demo['Moving_Units']['Male'] = True; 
+    demo['Moving_Units']['POC'] = False;
+    demo['Moving_Units']['country'] = USA;
+    demo['Moving_Units']['genre'] = INDIE;
+    demo['Moving_Units']['discovery'] = OLD_DAYS;
+    demo['Moving_Units']['Seen_Live'] = False;
+    demo['Moving_Units']['Kimi'] = False;
+    
+    demo['Metronomy'] = dict()
+    demo['Metronomy']['Male'] = True; 
+    demo['Metronomy']['POC'] = False;
+    demo['Metronomy']['country'] = USA;
+    demo['Metronomy']['genre'] = INDIE;
+    demo['Metronomy']['discovery'] = OLD_DAYS;
+    demo['Metronomy']['Seen_Live'] = False;
+    demo['Metronomy']['Kimi'] = False;
+    
+    artistStr = 'Remi_Wolf';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = BRIAN;
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Roisin_Murphy';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = IRELAND;
+    demo[artistStr]['genre'] = POP;
+    demo[artistStr]['discovery'] = KIMI;
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'Jack_Off_Jill';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = MUSIC_LEAGUE; #Sarah
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Sophie_Hunter';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = HIPHOP;
+    demo[artistStr]['discovery'] = MUSIC_LEAGUE; #I think?
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Ultra_Sunn';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = BELGIUM;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #Shazammed at Manray
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Late_Again';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = ON_MY_OWN_OTHER; #museum wandering playlist
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Linea_Aspera';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = GERMANY;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #Shazammed at Manray
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'BAYNK';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = NEW_ZEALAND;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = ON_MY_OWN_OTHER; #instagram add
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'MGL';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = ROMANIA;
+    demo[artistStr]['genre'] = HIPHOP;
+    demo[artistStr]['discovery'] = ON_MY_OWN_OTHER; #jack
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'SASAMI';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = True;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = BRIAN; 
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'Maribou_State';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = ENGLAND;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = BRIAN; 
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Parcels';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = AUSTRALIA;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = KIMI; 
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'Caribou';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = CANADA;
+    demo[artistStr]['genre'] = INDIE;  #electronic dance?
+    demo[artistStr]['discovery'] = KIMI; 
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'Icon_of_Coil';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = NORWAY;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #Shazammed at Manray
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Icon_of_Coil';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = NORWAY;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #Shazammed at Manray
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'London_After_Minight';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #Shazammed at Manray
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Cabaret_Nocture';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = BELGIUM;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #Shazammed at Manray
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'TV_on_the_Radio';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = True;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = OLD_DAYS; 
+    demo[artistStr]['Seen_Live'] = True;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Doechii';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = True;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = HIPHOP;
+    demo[artistStr]['discovery'] = BRIAN; 
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = True;
+    
+    artistStr = 'The_Soft_Moon';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = True; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = EMO;
+    demo[artistStr]['discovery'] = ON_MY_OWN_CONCERT; #I guess this is what I use for shazam
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
+    
+    artistStr = 'Bec_Lauder';
+    demo[artistStr] = dict()
+    demo[artistStr]['Male'] = False; 
+    demo[artistStr]['POC'] = False;
+    demo[artistStr]['country'] = USA;
+    demo[artistStr]['genre'] = INDIE;
+    demo[artistStr]['discovery'] = MUSIC_LEAGUE; 
+    demo[artistStr]['Seen_Live'] = False;
+    demo[artistStr]['Kimi'] = False;
 
     # demo[''] = dict()
     # demo['']['Male'] = True; 
